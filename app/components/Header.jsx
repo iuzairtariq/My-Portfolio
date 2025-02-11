@@ -24,17 +24,8 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
     };
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const handleScroll = () => {
-                // Your scroll handling logic here
-            };
-
-            window.addEventListener('scroll', handleScroll);
-
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
     return (
