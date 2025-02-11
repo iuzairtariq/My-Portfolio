@@ -20,7 +20,13 @@ export const navData = [
 
 const Navbar = () => {
     // Use the current URL fragment to set the initial active path
-    const [activePath, setActivePath] = useState(window.location.hash || '#home');
+    const [activePath, setActivePath] = useState('#home');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setActivePath(window.location.hash || '#home');
+        }
+    }, []);
 
     const handleNavClick = (path) => {
         setActivePath(path);
@@ -44,12 +50,14 @@ const Navbar = () => {
             });
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Call it initially to set the active path on load
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Call it initially to set the active path on load
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
     }, [activePath]);
 
     return (

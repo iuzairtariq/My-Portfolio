@@ -11,21 +11,26 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isHidden, setIsHidden] = useState(false);
 
-    const handleScroll = () => {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY) {
-            // Scrolling down
-            setIsHidden(true);
-        } else {
-            // Scrolling up
-            setIsHidden(false);
-        }
-        setLastScrollY(currentScrollY);
-    };
-
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        if (typeof window !== 'undefined') {
+            const handleScroll = () => {
+                const currentScrollY = window.scrollY;
+                if (currentScrollY > lastScrollY) {
+                    // Scrolling down
+                    setIsHidden(true);
+                } else {
+                    // Scrolling up
+                    setIsHidden(false);
+                }
+                setLastScrollY(currentScrollY);
+            };
+
+            window.addEventListener('scroll', handleScroll);
+
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
     }, [lastScrollY]);
 
     return (
