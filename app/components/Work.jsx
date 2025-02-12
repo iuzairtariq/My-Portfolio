@@ -40,7 +40,7 @@ const Work = ({ id }) => {
             <motion.div
               whileHover={{ scale: 1.05 }}
               className='aspect-square bg-no-repeat bg-cover bg-center 
-            rounded-none hover:rounded-2xl duration-500  relative cursor-pointer group'
+            rounded-none hover:rounded-2xl duration-500 relative cursor-pointer group'
               style={{ backgroundImage: `url(${project.bgImage})` }}>
               <div className='bg-slate-900/90 w-10/12 absolute bottom-5 left-1/2 -translate-x-1/2
               py-3 px-5 flex items-center justify-between group-hover:rounded-2xl group-hover:bottom-7 duration-500'>

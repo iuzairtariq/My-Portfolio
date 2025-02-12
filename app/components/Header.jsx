@@ -11,26 +11,21 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isHidden, setIsHidden] = useState(false);
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const handleScroll = () => {
-                const currentScrollY = window.scrollY;
-                if (currentScrollY > lastScrollY) {
-                    // Scrolling down
-                    setIsHidden(true);
-                } else {
-                    // Scrolling up
-                    setIsHidden(false);
-                }
-                setLastScrollY(currentScrollY);
-            };
-
-            window.addEventListener('scroll', handleScroll);
-
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY) {
+            // Scrolling down
+            setIsHidden(true);
+        } else {
+            // Scrolling up
+            setIsHidden(false);
         }
+        setLastScrollY(currentScrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
     return (
@@ -80,9 +75,9 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
             </motion.div>
 
             <motion.h3
-                initial={{ y: -20, opacity: 0 }}
+                initial={{ y: -30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
                 className='block sm:flex items-center gap-2 text-2xl sm:text-3xl'>
                 <span className='text-gray-500 font-Ovo'>Hi! I'm</span> <span className='font-Ovo'>Muhammad Uzair</span>
                 <Image className='w-8 sm:-mt-2 mx-auto' src={handicon} alt='hand' />
@@ -90,14 +85,14 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
             <motion.h1
                 initial={{ y: -30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className='text-4xl sm:text-6xl font-Ovo text-gray-500'>
                 I'm a <span className='text-black dark:text-white font-Ovo'>Mern Stack</span> Developer
             </motion.h1>
             <motion.p
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
+                transition={{ duration: 1, delay: 1 }}
                 className=' mx-auto font-Ovo text-gray-500'>
                 I am a Full Stack Developer with 3 years of experience in building web applications. Based in Pakistan.
             </motion.p>
