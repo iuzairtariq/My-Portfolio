@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="flex w-full md:flex-col items-center justify-evenly md:justify-center gap-y-10 h-[70px] md:h-max py-8 bg-black/80 text-white dark:bg-white/10 backdrop-blur-lg text-3xl md:text-xl md:rounded-full">
                 {navData.map((link, index) => (
                     <button
-                        className={`${link.path === activePath ? "text-red-600" : ""} relative flex items-center group hover:text-red-600 transition-all duration-300`}
+                        className={`${link.path === activePath ? "text-red-600" : ""} relative flex items-center group hover:text-red-600 transition-all duration-500`}
                         onClick={() => handleNavClick(link.path)}
                         key={index}
                     >

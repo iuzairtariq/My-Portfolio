@@ -36,7 +36,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
         ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
             >
                 <div className='flex items-center justify-around py-4'>
-                    <a href="#contact"><Phone /></a>
+                    <button className='p-2'><a href="#contact"><Phone /></a></button>
                     <a href='#home' className='text-2xl font-bold'>Uzair Tariq</a>
                     <button
                         onClick={() => setIsDarkMode(prev => !prev)}
