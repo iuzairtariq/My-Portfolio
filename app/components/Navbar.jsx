@@ -20,11 +20,15 @@ export const navData = [
 
 const Navbar = () => {
     // Use the current URL fragment to set the initial active path
-    const [activePath, setActivePath] = useState(window.location.hash || '#home');
+    const [activePath, setActivePath] = useState(
+        typeof window !== 'undefined' ? window.location.hash || '#home' : '#home'
+    );
 
     const handleNavClick = (path) => {
         setActivePath(path);
-        window.location.href = path;
+        if (typeof window !== 'undefined') {
+            window.location.href = path;
+        }
     };
 
     useEffect(() => {
@@ -37,20 +41,27 @@ const Navbar = () => {
                         const newActivePath = `#${section.id}`;
                         if (newActivePath !== activePath) {
                             setActivePath(newActivePath);
-                            window.history.replaceState(null, null, newActivePath);
+                            if (typeof window !== 'undefined') {
+                                window.history.replaceState(null, null, newActivePath);
+                            }
                         }
                     }
                 }
             });
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Call it initially to set the active path on load
+        if (typeof window !== 'undefined') {
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Call it initially to set the active path on load
+        }
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('scroll', handleScroll);
+            }
         };
     }, [activePath]);
+
 
     return (
         <nav className="flex flex-col items-center md:justify-center gap-y-4 fixed h-max bottom-0 mt-auto md:right-[2%] z-50 top-0 w-full md:w-16 md:max-w-md md:h-screen">

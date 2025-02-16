@@ -14,11 +14,14 @@ export default function Home() {
 
     useEffect(() => {
         setMounted(true);
-        const isDark = localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches);
-        setIsDarkMode(isDark);
+        if (typeof window !== 'undefined') {
+            const isDark = localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches);
+            setIsDarkMode(isDark);
+        }
     }, []);
+    
 
     useEffect(() => {
         if (mounted) {
