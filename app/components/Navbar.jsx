@@ -19,7 +19,6 @@ export const navData = [
 ];
 
 const Navbar = () => {
-    // Use the current URL fragment to set the initial active path
     const [activePath, setActivePath] = useState(
         typeof window !== 'undefined' ? window.location.hash || '#home' : '#home'
     );
@@ -32,7 +31,15 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-        const handleScroll = () => {
+        const debounce = (fn, delay) => {
+            let timeoutId;
+            return (...args) => {
+                if (timeoutId) clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => fn(...args), delay);
+            };
+        };
+
+        const handleScroll = debounce(() => {
             navData.forEach(link => {
                 const section = document.getElementById(link.name);
                 if (section) {
@@ -48,11 +55,11 @@ const Navbar = () => {
                     }
                 }
             });
-        };
+        }, 50); // Adjust the delay as needed
 
         if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', handleScroll);
-            handleScroll(); // Call it initially to set the active path on load
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
         }
 
         return () => {
@@ -62,10 +69,9 @@ const Navbar = () => {
         };
     }, [activePath]);
 
-
     return (
         <nav className="flex flex-col items-center md:justify-center gap-y-4 fixed h-max bottom-0 mt-auto md:right-[2%] z-50 top-0 w-full md:w-16 md:max-w-md md:h-screen">
-            <div className="flex w-full md:flex-col items-center justify-evenly md:justify-center gap-y-10 h-[70px] md:h-max py-8 bg-black/80 text-white dark:bg-white/10 backdrop-blur-lg text-3xl md:text-xl md:rounded-full">
+            <div className="flex w-full md:flex-col items-center justify-evenly md:justify-center gap-y-10 h-[60px] md:h-max py-8 bg-black/80 text-white dark:bg-white/10 backdrop-blur-lg text-3xl md:text-xl md:rounded-full">
                 {navData.map((link, index) => (
                     <button
                         className={`${link.path === activePath ? "text-red-600" : ""} relative flex items-center group hover:text-red-600 transition-all duration-500`}

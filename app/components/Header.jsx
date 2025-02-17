@@ -39,7 +39,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
         text-white backdrop-blur-lg shadow-md rounded-b-2xl transition-transform duration-700 ease-in-out 
         ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
             >
-                <div className='flex items-center justify-around py-4'>
+                <div className='h-[70px] flex items-center justify-around'>
                     <button className='p-2'><a href="#contact"><Phone /></a></button>
                     <a href='#home' className='text-2xl font-bold'>Uzair Tariq</a>
                     <button
