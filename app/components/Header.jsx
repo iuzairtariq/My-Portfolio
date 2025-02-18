@@ -91,14 +91,14 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className='text-4xl sm:text-6xl font-Ovo text-gray-500'>
-                I'm a <span className='text-black dark:text-white font-Ovo'>Mern Stack</span> Developer
+                I'm a <span className='text-black dark:text-white font-Ovo'>Full Stack</span> Developer
             </motion.h1>
             <motion.p
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}
                 className=' mx-auto font-Ovo text-gray-500'>
-                I am a Full Stack Developer with 3 years of experience in building web applications. Based in Pakistan.
+                Innovative Full Stack Developer with a flair for designing user-friendly and dynamic web applications. Based in Pakistan
             </motion.p>
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
