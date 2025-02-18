@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
 import React from 'react'
 import { motion } from 'motion/react'
 
@@ -25,10 +25,10 @@ const Footer = ({ id }) => {
                         <a target='_blank' href="https://github.com/iuzairtariq"><Github /></a>
                     </li>
                     <li>
-                        <a href="#"><Linkedin /></a>
+                        <a target='_blank' href="https://www.linkedin.com/in/iuzairtariq"><Linkedin /></a>
                     </li>
                     <li>
-                        <a href="#"><Twitter /></a>
+                        <a target='_blank' href="https://instagram.com/iuzairtariq"><Instagram /></a>
                     </li>
                 </ul>
             </div>

@@ -1,11 +1,11 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Moon, Phone, Sun } from 'lucide-react'
+import { FileCode, Moon, Phone, Sun } from 'lucide-react'
 import handicon from '@/assets/hand-icon.png'
 import { motion } from 'motion/react'
 import mypic from '@/assets/mypic.jpeg'
-import DialogComp from './Dialog'
+import { Button } from './ui/button'
 
 const Header = ({ id, isDarkMode, setIsDarkMode }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -104,8 +104,9 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 1 }}>
-                <DialogComp />
+                <a href="/uzairtariq-resume.pdf" target='_blank'><Button>My Resume <FileCode /></Button></a>
             </motion.div>
+
         </div>
     )
 }

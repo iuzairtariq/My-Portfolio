@@ -1,5 +1,5 @@
 import hand_icon from './hand-icon.png';
-import { Briefcase, Code, Globe, GraduationCap, Images, Layers, Smartphone } from 'lucide-react';
+import { Briefcase, Code, Globe, GraduationCap, BrainCircuit, Layers, Smartphone } from 'lucide-react';
 
 export const assets = {
     Briefcase, Code, GraduationCap,
@@ -8,37 +8,37 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Web project',
-        description: 'Web Development',
-        bgImage: '/work-1.png',
+        title: 'Web Project',
+        description: 'E-Commerce (live)',
+        bgImage: '/work-3.png',
         link: 'https://clothing-frontend-omega.vercel.app'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Geo Based App',
+        description: 'coming soon',
         bgImage: '/work-2.png',
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
+        title: 'AI-Powered Bot',
+        description: 'coming soon',
+        bgImage: '/work-1.png',
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'AI-Powered Tool',
+        description: 'coming soon',
         bgImage: '/work-4.png',
     },
 ]
 
 export const serviceData = [
-    { icon: Globe, title: 'Web app development', description: 'Crafting innovative, responsive web solutions for impactful and seamless user experiences.' },
-    { icon: Smartphone, title: 'Mobile app development', description: 'Developing seamless, innovative mobile app solutions that engage and delight users.' },
-    { icon: Layers, title: 'UI/UX design', description: 'Designing intuitive, user-friendly UI/UX experiences that captivate and engage users.' },
-    { icon: Images, title: 'Graphic design', description: 'Creating visually compelling graphic designs that captivate and communicate effectively.' },
+    { icon: Globe, title: 'Web App Development', description: 'Crafting innovative, responsive web solutions for impactful and seamless user experiences.' },
+    { icon: Layers, title: 'UI/UX Design', description: 'Designing intuitive, user-friendly UI/UX experiences that captivate and engage users.' },
+    { icon: Smartphone, title: 'Mobile App Development', description: 'Developing seamless, innovative mobile app solutions that engage and delight users. (in progress...)' },
+    { icon: BrainCircuit, title: 'AI Integrated Projects', description: 'AI-powered designs that blend technology and creativity for impactful results. (in progress...)' },
 ]
 
 export const infoList = [
-    { icon: Code, title: 'Technology', description: 'HTML, CSS, JavaScript, React Js, Next Js, MongoDB, Express Js, React Native' },
+    { icon: Code, title: 'Technology', description: 'HTML, CSS, JavaScript, React Js, Next Js, MongoDB, Express Js, Node Js' },
     { icon: GraduationCap, title: 'Education', description: 'BS in Software Engineering from Virtual University of Pakistan' },
     { icon: Briefcase, title: 'Projects', description: 'Built more than 5 projects' }
 ];

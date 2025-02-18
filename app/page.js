@@ -42,5 +42,6 @@ export default function Home() {
             <Contact id="contact" isDarkMode={isDarkMode} />
             <Footer id="contact" isDarkMode={isDarkMode} />
         </div>
+        
     );
 }
