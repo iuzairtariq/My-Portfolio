@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
+      <link rel="icon" href="/head-icon.png" sizes="any" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

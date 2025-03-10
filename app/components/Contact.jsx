@@ -104,7 +104,6 @@ const Contact = ({ id }) => {
                         {loading ? <>Send <Loader className='animate-spin' /> </> : <>Send <Send /></>}
                     </Button>
                 </motion.div>
-
             </motion.form>
         </motion.div>
     )

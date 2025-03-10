@@ -21,7 +21,7 @@ export default function Home() {
             setIsDarkMode(isDark);
         }
     }, []);
-    
+
 
     useEffect(() => {
         if (mounted) {
@@ -36,12 +36,12 @@ export default function Home() {
         <div className="px-6 sm:px-[12%]">
             <Header id="home" isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <About id="about" isDarkMode={isDarkMode} />
-            <Services id="services" isDarkMode={isDarkMode} />
             <Work id="work" isDarkMode={isDarkMode} />
+            <Services id="services" isDarkMode={isDarkMode} />
             <Testimonials id="testimonials" isDarkMode={isDarkMode} />
             <Contact id="contact" isDarkMode={isDarkMode} />
             <Footer id="contact" isDarkMode={isDarkMode} />
         </div>
-        
+
     );
 }

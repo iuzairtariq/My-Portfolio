@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { FileCode, Moon, Phone, Sun } from 'lucide-react'
+import { ArrowUpRight, FileCode, Moon, Phone, Sun } from 'lucide-react'
 import handicon from '@/assets/hand-icon.png'
 import { motion } from 'motion/react'
 import mypic from '@/assets/mypic.jpeg'
@@ -103,10 +103,12 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
             <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 1 }}>
+                transition={{ duration: 1, delay: 1 }}
+                className='space-x-4'
+            >
                 <a href="/uzairtariq-resume.pdf" target='_blank'><Button>My Resume <FileCode /></Button></a>
+                <a href="#contact"><Button variant='destructive'>Hire Me <ArrowUpRight/></Button></a>
             </motion.div>
-
         </div>
     )
 }

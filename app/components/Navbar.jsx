@@ -12,8 +12,8 @@ import { useState, useEffect } from "react";
 export const navData = [
     { name: "home", path: "#home", Icon: Home },
     { name: "about", path: "#about", Icon: SquareUserRound },
-    { name: "services", path: "#services", Icon: Briefcase },
     { name: "work", path: "#work", Icon: Code },
+    { name: "services", path: "#services", Icon: Briefcase },
     { name: "testimonials", path: "#testimonials", Icon: MessageSquareMore },
     { name: "contact", path: "#contact", Icon: Phone },
 ];

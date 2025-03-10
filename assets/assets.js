@@ -19,9 +19,10 @@ export const workData = [
         bgImage: '/work-2.png',
     },
     {
-        title: 'AI-Powered Bot',
-        description: 'coming soon',
+        title: 'AI-Powered App',
+        description: 'Finance Manager (live)',
         bgImage: '/work-1.png',
+        link: 'https://wealth-puce.vercel.app'
     },
     {
         title: 'AI-Powered Tool',
@@ -38,7 +39,7 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: Code, title: 'Technology', description: 'HTML, CSS, JavaScript, React Js, Next Js, MongoDB, Express Js, Node Js' },
+    { icon: Code, title: 'Technology', description: 'JavaScript, ReactJs, NextJs, MongoDB, PostgreSQL, Express Js, Node Js' },
     { icon: GraduationCap, title: 'Education', description: 'BS in Software Engineering from Virtual University of Pakistan' },
     { icon: Briefcase, title: 'Projects', description: 'Built more than 5 projects' }
 ];
