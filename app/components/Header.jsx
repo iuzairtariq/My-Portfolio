@@ -106,7 +106,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 transition={{ duration: 1, delay: 1 }}
                 className='space-x-4'
             >
-                <a href="/UzairTariq-MERN.pdf" target='_blank'><Button>My Resume <FileCode /></Button></a>
+                <a href="/Uzair Tariq - MERN.pdf" target='_blank'><Button>My Resume <FileCode /></Button></a>
                 <a href="#contact"><Button variant='destructive'>Hire Me <ArrowUpRight/></Button></a>
             </motion.div>
         </div>
