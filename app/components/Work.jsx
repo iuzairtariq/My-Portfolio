@@ -26,7 +26,7 @@ const Work = ({ id }) => {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.7, duration: 0.5 }}
         className='text-justify max-w-2xl mx-auto mt-5 mb-12 font-Ovo text-gray-500'>
-        As a MERN stack developer, I specialize in building dynamic and responsive web applications
+        As a MERN Stack Developer, I specialize in building dynamic and responsive web applications
         using MongoDB, Express.js, React, and Node.js. My expertise lies in creating
         seamless user experiences and efficient backend solutions.
       </motion.p>
