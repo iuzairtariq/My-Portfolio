@@ -90,8 +90,8 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 initial={{ y: -30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className='text-4xl sm:text-6xl font-Ovo text-gray-500'>
-                Dedicated <span className='text-black dark:text-white font-Ovo'>MERN Stack</span> Developer
+                className='text-4xl sm:text-6xl font-Ovo text-black dark:text-white'>
+                Dedicated MERN Stack Developer
             </motion.h1>
             <motion.p
                 initial={{ y: 30, opacity: 0 }}
@@ -107,7 +107,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 className='space-x-4'
             >
                 <a href="/UzairTariq-MERN.pdf" target='_blank'><Button>My Resume <FileCode /></Button></a>
-                <a href="#contact"><Button variant='destructive'>Hire Me <ArrowUpRight/></Button></a>
+                <a href="#contact"><Button variant='destructive'>Hire Me <ArrowUpRight /></Button></a>
             </motion.div>
         </div>
     )
