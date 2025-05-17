@@ -11,7 +11,7 @@ export const workData = [
         title: 'Web Project',
         description: 'E-Commerce (live)',
         bgImage: '/work-3.png',
-        link: 'https://clothing-frontend-omega.vercel.app'
+        link: 'https://clothing-ecommerce-orcin.vercel.app'
     },
     {
         title: 'Geo Based App',
