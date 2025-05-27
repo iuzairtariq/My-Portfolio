@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { ArrowUpRight, FileCode, Moon, Phone, Sun } from 'lucide-react'
 import handicon from '@/assets/hand-icon.png'
 import { motion } from 'motion/react'
-import mypic from '@/assets/mypic.jpeg'
+import mypic from '@/assets/mypic.png'
 import { Button } from './ui/button'
 
 const Header = ({ id, isDarkMode, setIsDarkMode }) => {
@@ -33,11 +33,10 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
     }, [lastScrollY]);
 
     return (
-        <div id={id} className='flex flex-col items-center justify-center h-screen text-center mx-auto gap-8'>
+        <div id={id} className='flex flex-col items-center justify-center min-h-screen text-center mx-auto gap-8'>
             <nav
                 className={`fixed z-50 top-0 left-1/2 transform -translate-x-1/2 w-[70%] md:w-1/2 lg:w-1/3 bg-black/80 dark:bg-white/10
-        text-white backdrop-blur-lg shadow-md rounded-b-2xl transition-transform duration-700 ease-in-out 
-        ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
+        text-white backdrop-blur-lg shadow-md rounded-b-2xl transition-transform duration-700 ease-in-out ${isHidden ? '-translate-y-full' : 'translate-y-0'}`}
             >
                 <div className='h-[70px] flex items-center justify-around'>
                     <button className='p-2'><a href="#contact"><Phone /></a></button>
@@ -72,7 +71,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
                 <Image
-                    className='rounded-full w-44 sm:w-48'
+                    className='rounded-2xl w-36 sm:w-44 md:w-48'
                     src={mypic}
                     alt='mypic'
                 />

@@ -70,7 +70,7 @@ const Navbar = () => {
     }, [activePath]);
 
     return (
-        <nav className="flex flex-col items-center md:justify-center gap-y-4 fixed h-max bottom-0 mt-auto md:right-[2%] z-50 top-0 w-full md:w-16 md:max-w-md md:h-screen">
+        <nav className="flex flex-col md:justify-center gap-y-4 fixed h-max bottom-0 md:top-0 mt-auto md:right-[2%] z-50 w-full md:w-16 md:max-w-md md:h-screen">
             <div className="flex w-full md:flex-col items-center justify-evenly md:justify-center gap-y-10 h-[60px] md:h-max py-8 bg-black/80 text-white dark:bg-white/10 backdrop-blur-lg text-3xl md:text-xl md:rounded-full">
                 {navData.map((link, index) => (
                     <button
