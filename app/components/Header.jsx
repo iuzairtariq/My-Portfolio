@@ -89,7 +89,7 @@ const Header = ({ id, isDarkMode, setIsDarkMode }) => {
                 initial={{ y: -30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
-                className='text-4xl sm:text-6xl font-Ovo text-black dark:text-white'>
+                className='text-center text-3xl sm:text-4xl lg:text-6xl font-Ovo'>
                 Dedicated MERN Stack Developer
             </motion.h1>
             <motion.p

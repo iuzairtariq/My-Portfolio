@@ -54,7 +54,7 @@ const Contact = ({ id }) => {
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-                className='text-center text-5xl font-Ovo'>Get in touch</motion.h2>
+                className='text-center text-3xl sm:text-4xl lg:text-5xl font-Ovo'>Get in touch</motion.h2>
             <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
