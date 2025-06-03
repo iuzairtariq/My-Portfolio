@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { infoList } from '@/assets/assets'
 import { motion } from 'motion/react'
-import mypic2 from '@/assets/mypic2.jpeg'
+import mypic2 from '@/assets/mypic2.jpg'
 
 
 const About = ({ id, isDarkMode }) => {
