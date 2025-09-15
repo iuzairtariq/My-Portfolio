@@ -23,6 +23,7 @@ const Contact = ({ id }) => {
         });
 
         const data = await response.json();
+        console.log(data);
 
         if (data.success) {
             setLoading(false)
@@ -101,7 +102,7 @@ const Contact = ({ id }) => {
                     transition={{ delay: 0.4, duration: 0.8 }}
                     className='text-center'>
                     <Button type='submit' disabled={loading}>
-                        {loading ? <>Send <Loader className='animate-spin' /> </> : <>Send <Send /></>}
+                        {loading ? <Loader className='animate-spin' /> : <>Send <Send /></>}
                     </Button>
                 </motion.div>
             </motion.form>
