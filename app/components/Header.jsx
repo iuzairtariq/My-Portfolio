@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { ArrowUpRight, FileCode, Moon, Phone, Sun } from 'lucide-react'
 import handicon from '@/assets/hand-icon.png'
 import { motion } from 'motion/react'
-import mypic from '@/assets/mypic.png'
+import mypic from '@/assets/mypic.jpg'
 import { Button } from './ui/button'
 
 const Header = ({ id, isDarkMode, setIsDarkMode }) => {
