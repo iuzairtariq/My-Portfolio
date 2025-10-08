@@ -27,9 +27,6 @@ const Footer = ({ id }) => {
                     <li>
                         <a target='_blank' href="https://www.linkedin.com/in/iuzairtariq"><Linkedin /></a>
                     </li>
-                    <li>
-                        <a target='_blank' href="https://instagram.com/iuzairtariq"><Instagram /></a>
-                    </li>
                 </ul>
             </div>
         </div>
