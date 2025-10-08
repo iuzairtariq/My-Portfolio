@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 import React from 'react'
 import { motion } from 'motion/react'
 
